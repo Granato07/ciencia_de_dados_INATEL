@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-dfPaises = pd.read_csv('paises.csv', delimiter=';', decimal=',')
+dfPaises = pd.read_csv('paises.csv', delimiter=';')
 
 # PARTE 3
 
@@ -16,7 +16,7 @@ print(dfPaises.loc[idx, ['Country', 'Region']])
 
 # 3
 group_region = dfPaises.groupby('Region')
-print(group_region.mean()['Literacy (%)'])
+print(group_region['Literacy (%)'].mean())
 
 # 4
 noCoast = dfPaises[dfPaises['Coastline (coast/area ratio)'] == 0]
