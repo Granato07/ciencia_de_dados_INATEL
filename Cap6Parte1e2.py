@@ -2,8 +2,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-dfPaises = pd.read_csv('paises.csv', delimiter=';', decimal=',')
-dfSpace = pd.read_csv('space.csv')
+dfPaises = pd.read_csv('paises.csv', delimiter=';')
+dfSpace = pd.read_csv('space.csv', delimiter=';')
+dfSpace.columns = dfSpace.columns.str.strip()
 
 # PARTE 1
 
